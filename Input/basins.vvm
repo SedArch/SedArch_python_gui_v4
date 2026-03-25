@@ -1,0 +1,29 @@
+TITLE = "Basin fill"
+! This shows the filling of two closed basins in a short time
+! due to large fluvial sediment input
+OUTFILE = "C:/Users/prash/OneDrive/Desktop/Claude/sedarch_python_gui_v4/Output/basins_out.vvm" ! Output file
+TIME = 0                ! Initial time in ka
+SED_DIAMETERS = 5 4 3 2 ! Sediment diameers in mm
+CELLSIDE = 100          ! Cell side in m
+INCLUDE = "maps/top_basins_60x40.vvm" ! File containing initial surface
+SED1 = 0.25             ! Basment sediment proportions
+SED2 = 0.25
+SED3 = 0.25
+SED4 = 0.25
+SEALEVEL = -100         ! Initial sea level
+
+TIME_SEALEVEL_CURVE =   ! Sea level curve (sigle point, so sea level is steady)
+ 0 -100
+!Optional sea-level variation. Replace previous 2 lines by: 
+!INCLUDE = "curves/sealevel_simple.vvm"
+
+STEP_DURATION = 0.1     ! Step duration in ka
+STEP_COUNT = 20         ! Number of steps
+
+CHANNEL_FACTOR = 1.0    ! Intensity (multiplier of flow and sediment input)
+! Sources must specify:
+!   X coordinate (m), Y coordinate (m), water inut (m^3/s),
+!   and sediment input (m^3/s) for each sediment
+CHANNEL_SOURCES = 
+  350 2500 100 0.001 0.001 0.001 0.001
+  

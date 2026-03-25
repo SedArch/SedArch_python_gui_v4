@@ -1,0 +1,30 @@
+TITLE = "Fluvial"
+OUTFILE = "C:/Users/prash/OneDrive/Desktop/Claude/sedarch_python_gui_v4/Output/fluvial_out.vvm"
+TIME = 0
+SED_DIAMETERS = 1.0 0.1
+CELLSIDE = 100
+INCLUDE = "maps/top_slope_4p_60x40.vvm"
+SED1 = 0.5
+SED2 = 0.5
+SEALEVEL = 0
+
+TIME_SEALEVEL_CURVE =
+ 0 0
+STEP_DURATION = 3
+STEP_COUNT = 5
+!INCLUDE = "curves/sealevel_simple.vvm"
+ 
+GROWTH_FACTOR = 0.5
+GROWTH_SED_ID = 1
+GROWTH_FACTOR = 0.5
+GROWTH_SED_ID = 2
+
+!DISP_FACTOR = 10.0
+!INCLUDE = "curves/dispersion_curve.vvm"
+
+CHANNEL_FACTOR = 1
+CHANNEL_REWORK_FACTOR = 0.5
+!CHANNEL_EVENT_PERIOD = 1 ! kiloyears
+!CHANNEL_EVENT_DURATION = 1 ! seconds
+CHANNEL_SOURCES =
+  200 2500 1000 0.00005 0.0001

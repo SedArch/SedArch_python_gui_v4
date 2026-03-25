@@ -1,0 +1,6 @@
+TIME_SEALEVEL_CURVE = ! Time in ka, sea level in m
+-56000 -5
+-52000 21
+-50000 15
+-48000 21
+-45000 33

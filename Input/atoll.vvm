@@ -1,0 +1,35 @@
+TITLE = "Atoll formed by carbonate growth and waves"
+OUTFILE = "C:/Users/prash/OneDrive/Desktop/Claude/sedarch_python_gui_v4/Output/atoll_out.vvm" ! Output file
+SED_DIAMETERS = 2.0 1.0 0.1 0.05 ! Sediment diameters in mm
+CELLSIDE = 100                   ! cell side in m
+INCLUDE = "maps/top_atoll_60x40.vvm" ! File containing initial surface
+TIME = 0                         ! Initial time in ka
+SEALEVEL = -10                   ! Initial sea level in m
+SED1 = 0.25                      ! Basement sediment proportions
+SED2 = 0.25
+SED3 = 0.25
+SED4 = 0.25
+
+TIME_SEALEVEL_CURVE =            ! Sea-level curve (time in ka, level in m)
+ 0  -10
+30   20
+STEP_DURATION = 1                ! Step duration in ka
+STEP_COUNT = 30                  ! Number of steps to run
+
+WAVE_FACTOR = 1.0                ! Multiplier of wave intensity
+WAVE_SOURCES =                   ! Wave sources: Azimuth [deg], amplitude [m], period [s]
+ 90 1 11
+ 225 0.6 11
+ 315 0.6 11
+
+GROWTH_FACTOR = 1                ! Growth process (1) intensity (growth rate in m/ka)
+GROWTH_SED_ID = 3                ! ID of sediment that grows in this process
+INCLUDE = "curves/carb_erg_growth1.vvm" ! Curve that specifies growth as a function of wave energy
+INCLUDE = "curves/carb_cutoff.vvm" ! Curve that specifies growth as a function of depth
+! The effects of these two curves are multiplied.
+! Both the wave energy AND the depth must be favorable to produce growth
+
+! THe following causes growth of a separate sediment (ID 2)
+GROWTH_FACTOR = 1                ! Growth process (2) intensity (growth rate in m/ka)
+GROWTH_SED_ID = 2                ! ID of sediment that grows in this process
+INCLUDE = "curves/carb_level_growth.vvm" ! Curve that specifies growth as a function of depth

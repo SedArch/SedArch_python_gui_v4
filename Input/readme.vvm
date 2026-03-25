@@ -1,0 +1,18 @@
+TITLE = "Trivial pure layercake aggradation example"
+OUTFILE = "C:/Users/prash/OneDrive/Desktop/Claude/sedarch_python_gui_v4/Output/readme_out.vvm"
+SED_DIAMETERS = 10.0 1.0 20.0 1.0
+CELLSIDE = 100.0
+
+! Sediment base fractions
+SED1 = 0.25
+SED2 = 0.25
+SED3 = 0.25
+SED4 = 0.25
+
+STEP_DURATION = 2.0
+STEP_COUNT = 50
+INITIAL_TIME = 0.0
+SEALEVEL = 0.0
+
+DISP_FACTOR = 0.1
+GROWTH_FACTOR = 8.1

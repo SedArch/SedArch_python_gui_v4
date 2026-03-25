@@ -1,0 +1,11 @@
+! This file describes the initial state of a model
+!SED_DIAMETERS = 10 1 0.1  ! Diameters in mm
+!CELLSIDE = 100  ! Square cell size in m
+!TIME = -1000  ! Start time in ka
+!SEALEVEL = 25 ! Start sea level in m
+TOP =  ! Initial top surface in m
+ 10 20 30 40
+ 20 30 40 50 
+ 30 40 50 60
+!SED1 = 0.34 ! Initial fraction, in this case a single number for each
+!SED2 = 0.33 ! It could also be a surface for each

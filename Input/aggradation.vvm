@@ -1,0 +1,19 @@
+TITLE = "Trivial pure layercake aggradation example"
+OUTFILE = "C:/Users/prash/OneDrive/Desktop/Claude/sedarch_python_gui_v4/Output/aggradation_out.vvm" ! Output file
+SED_DIAMETERS = 10 1 20 ! Sediment diameters in mm
+CELLSIDE = 100          ! cell side in m
+INCLUDE = "maps/top_slope_9x9.vvm" ! File containing initial surface
+SED1 = 0.5              ! Sediment proportions in basement
+SED2 = 0.4
+SED3 = 0.1
+STEP_DURATION = 2       ! Step duartion in thousands of years
+STEP_COUNT = 10         ! Number of steps
+
+GROWTH_FACTOR = 1.1     ! Growth process (1) intensity (growth rate in m/ka)
+GROWTH_SED_ID = 1       ! ID of sediment that grows in this process
+
+GROWTH_FACTOR = 1.2     ! Growth process (2) intensity (growth rate in m/ka)
+GROWTH_SED_ID = 2       ! ID of sediment that grows in this process
+
+! The following converts the output to a file readable by GPM
+!POSTPROCESS = "gconv output/aggradation_out.kvl output/aggradation_out.hdf5"

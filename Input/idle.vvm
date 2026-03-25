@@ -1,0 +1,18 @@
+TITLE = "Do nothing except show sea level. Useful only for display or debugging"
+OUTFILE = "C:/Users/prash/OneDrive/Desktop/Claude/sedarch_python_gui_v4/Output/idle_out.vvm" ! Output file
+SED_DIAMETERS = 10 1 0.1  ! Diameters in mm
+CELLSIDE = 100  ! Square cell size in m
+TIME = 0  ! Start time in ka
+SEALEVEL = 10 ! Start sea level in m
+TOP =  ! Initial top surface in m
+  0 10 20 30
+ 10 20 30 40 
+ 20 30 40 50
+SED_BASE_FRACS = 0.34 0.33 0.33 ! Base sediment fractions
+STEP_DURATION = 1 ! Step duration in ka
+STEP_COUNT = 16 ! Number of steps
+
+INCLUDE = "curves/sealevel_cycles_200ka.vvm" ! Sea-level curve
+
+! Notice that here are no processes (no "FACTOR" parameters)
+! other than sea-level change

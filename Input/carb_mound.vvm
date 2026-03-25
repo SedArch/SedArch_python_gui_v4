@@ -1,0 +1,34 @@
+TITLE = "Carbonate growth by waves on topography with a mound"
+OUTFILE = "C:/Users/prash/OneDrive/Desktop/Claude/sedarch_python_gui_v4/Output/carb_mound_out.vvm"
+SED_DIAMETERS = 1.0 0.1 2.0
+CELLSIDE = 100
+INCLUDE = "maps/top_mound_60x40.vvm"
+TIME = 0
+SEALEVEL = 45
+SED1 = 0.5
+SED2 = 0.5
+SED3 = 0.0
+
+TIME_SEALEVEL_CURVE =
+ 0  45
+ 60 50
+STEP_DURATION = 3
+STEP_COUNT = 20
+
+WAVE_FACTOR = 1.0
+!WAVE_SED_FACTOR = 1.0
+WAVE_SOURCES = ! Azimuth [deg], amplitude [m], period [s]
+ 90 1 10
+
+GROWTH_FACTOR = 1
+GROWTH_SED_ID = 3
+INCLUDE = "curves/carb_level_growth.vvm"
+INCLUDE = "curves/carb_erg_growth.vvm"
+
+! The two growth criteria above are multiplicative.
+! But if you replace the last line (carb_erg_growth) by an
+! additional group (3 lines below), they will be additive
+
+!GROWTH_FACTOR = 1
+!GROWTH_SED_ID = 3
+!INCLUDE = "curves/carb_erg_growth.vvm"

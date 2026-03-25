@@ -1,0 +1,19 @@
+TITLE = "Tectonics example"
+OUTFILE = "C:/Users/prash/OneDrive/Desktop/Claude/sedarch_python_gui_v4/Output/tectonics_out.vvm" ! Output file
+SED_DIAMETERS = 10 1 20 ! Sediment diameters in mm
+CELLSIDE = 100 ! Cell side in m
+TIME = 0 ! Initial time in ka
+INCLUDE = "maps/top_slope_4p_60x40.vvm" ! Initial topography
+SED1 = 0.5 ! Base sediment proportions
+SED2 = 0.4
+SED3 = 0.1
+STEP_DURATION = 20 ! Step duration in ka
+STEP_COUNT = 100 ! Number of steps
+
+INCLUDE = "curves/sealevel_cycles_rise_15ma.vvm" ! Sea-level curve (if single entry: constant
+
+DISP_FACTOR = 0.2 ! Base dispersion factor (m^2/ka)
+INCLUDE = "curves/dispersion_curve.vvm" ! Dispersion factor multiplier as function of depth
+
+TECT_FACTOR = 0.01 ! Base uplift rate (m/ka)
+INCLUDE = "maps/tectonics_fault_60x40.vvm" ! Uplift multiplier map

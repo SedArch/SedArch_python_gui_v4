@@ -1,0 +1,39 @@
+TITLE = "A slightly larger example of turbidite channels and fan"
+OUTFILE = "C:/Users/prash/OneDrive/Desktop/Claude/sedarch_python_gui_v4/Output/turb_fan_long_out.vvm" ! Output file
+TIME = 0 ! Initial time in ka
+SED_DIAMETERS = 2.0 1.0 0.1 0.05 ! Sediment diameters in mm
+CELLSIDE = 100 ! Cell side in m
+INCLUDE = "maps/top_slope_break_5p_1p_60x40.vvm" ! Initial topography
+SED1 = 0.25 ! Base sediment proportions
+SED2 = 0.25
+SED3 = 0.25
+SED4 = 0.25
+SEALEVEL = 150 ! Initial sea level in m
+STEP_DURATION = 3 ! Step duration in ka
+STEP_COUNT = 40 ! Number of steps
+
+TIME_SEALEVEL_CURVE = ! Sea-level curve (if single entry: constant)
+ 0 150
+ 120 300
+
+! Accumulation rates (m/ka) and IDs of 4 different sediment types
+GROWTH_FACTOR = 0.03
+GROWTH_SED_ID = 1
+
+GROWTH_FACTOR = 0.03
+GROWTH_SED_ID = 2
+
+GROWTH_FACTOR = 0.03
+GROWTH_SED_ID = 3
+
+GROWTH_FACTOR = 0.03
+GROWTH_SED_ID = 4
+
+DISP_FACTOR = 0.1
+
+CHANNEL_FACTOR = 2 ! Channel flow and sediment input multiplier
+CHANNEL_REWORK_FACTOR = 0.01 ! Inensity of channel reworking (transverse transport)
+CHANNEL_EVENT_PERIOD = 1 ! Every how often a flow event occurs (ka)
+CHANNEL_EVENT_DURATION = 1 ! Duration of initial flow (in seconds)! seconds
+CHANNEL_SOURCES = ! Channel sources (X(m), Y(m), Water(m^3/s), SED1 (m^3/s) ...
+  500 2400 2000000 1 1 1 1
